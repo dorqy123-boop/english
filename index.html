@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dorian de la O · English 507</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,6 +186,49 @@ footer{text-align:center;padding:34px 18px 50px;border-top:1px solid #c9a45c55;c
 #ember{position:fixed;inset:0;pointer-events:none;z-index:1}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media (max-width:560px){.hero .meta{flex-direction:column}.hero .meta span+span{border-left:0;border-top:1px solid var(--gold)}.wing{opacity:.75}}
+
+/* ===== RESPONSIVO ===== */
+img,svg,iframe,canvas{max-width:100%}
+body{font-size:clamp(1.05rem,.98rem + .35vw,1.2rem)}
+.top{padding-inline:max(14px,env(safe-area-inset-left)) max(14px,env(safe-area-inset-right))}
+.drawer{overflow-y:auto;overscroll-behavior:contain;padding-bottom:calc(34px + env(safe-area-inset-bottom))}
+.hero h1{overflow-wrap:break-word}
+.doc-bar{flex-wrap:wrap}
+.doc-name{flex:1 1 150px;white-space:normal;overflow-wrap:anywhere}
+.doc-bar a{display:inline-flex;align-items:center;min-height:40px}
+
+@media (min-width:761px) and (max-width:900px){.hero{max-width:74vw}}
+@media (max-width:900px){.sec{padding:50px 18px 80px}}
+
+@media (max-width:760px){
+  .banner{min-height:clamp(460px,80vh,640px)}
+  .hero h1{font-size:clamp(1.9rem,9vw,3rem)}
+  .letter{width:calc(100% - 36px);margin:30px auto 0;padding:26px 22px}
+  .letter .drop{font-size:3.2rem}
+  .frame{width:calc(100% - 44px);margin:0 auto 56px;padding:18px}
+  .divider{padding-inline:20px;margin:36px auto 24px}
+  .gallery{gap:28px;margin-top:40px}
+  .sec{padding:42px 16px 70px}
+  .sec h2::before,.sec h2::after{margin:0 .3em}
+  .docs{gap:28px}
+  .doc-pages{right:-6px;font-size:.74rem;padding:6px 14px 6px 18px}
+}
+@media (max-width:380px){
+  .brand{font-size:.9rem}
+  .brand img{height:36px}
+  .hero{padding:24px 12px 48px}
+  .sec h2::before,.sec h2::after{display:none}
+  .doc-bar{padding:10px}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .banner{min-height:0;padding:26px 0 44px}
+  .hero h1{font-size:clamp(1.6rem,5.5vw,2.4rem)}
+  .seal{width:72px;height:72px;margin-top:-34px}
+}
+@supports (height:1svh){
+  .banner{min-height:clamp(480px,88svh,780px)}
+  @media (max-width:760px){.banner{min-height:clamp(460px,80svh,640px)}}
+}
 </style>
 </head>
 <body>
@@ -333,7 +376,7 @@ footer{text-align:center;padding:34px 18px 50px;border-top:1px solid #c9a45c55;c
 
 </main>
 
-<footer>✠ Dorian Alexander de la O Aguirre · 507 · English ✠</small></footer>
+<footer>✠ Dorian Alexander de la O Aguirre · 507 · English ✠</footer>
 
 <script>
 /* ===== NAVEGACIÓN ENTRE PÁGINAS (todo en este mismo archivo) ===== */
